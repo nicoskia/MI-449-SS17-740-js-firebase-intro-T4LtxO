@@ -30,7 +30,7 @@ function readWoofsInDatabase () {
     })
   firebase.database().ref('woofs')
     .on('child_removed', function (deleteSnap) {
-      deleteWoofRow(deleteSnap.key, deleteSnap.val())
+      deleteWoofRow(deleteSnap.key)
     })
 }
 
